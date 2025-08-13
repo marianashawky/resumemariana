@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariana Shawky — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="imgs/boy3.png">
+  <style>
+    :root{
+      --bg:#000;
+      --panel:#111;
+      --text:#f5f5f5;
+      --muted:#bdbdbd;
+      --brand:#ff5722; /* orangered vibe */
+      --brand-2:#ffc107;
+      --card:#161616;
+      --ring: rgba(255, 87, 34, .35);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--text); font-family:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Do Hyeon", sans-serif; overflow-x:hidden;
+    }
+
+    /* Sidebar */
+    .sidebar{
+      position:fixed; inset:0 auto 0 0; width:100px; background:#1b1b1b; display:flex; flex-direction:column; align-items:center; gap:18px; padding:18px 10px; border-right:1px solid #262626; z-index:50;
+    }
+    .logo{display:grid; place-items:center; width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--brand),#ff784e); box-shadow:0 6px 20px var(--ring); font-weight:800; letter-spacing:.5px}
+    .logo span{font-size:.8rem}
+    .nav-link{width:100%; text-align:center; color:var(--muted); text-decoration:none; padding:14px 8px; border-radius:12px; transition:.2s ease; display:flex; flex-direction:column; align-items:center; gap:6px}
+    .nav-link i{font-size:28px}
+    .nav-link:hover,.nav-link.active{color:#fff; background:#232323}
+
+    /* Main wrapper */
+    .wrap{margin-left:100px; min-height:100%;}
+
+    /* Hero */
+    section{padding:64px 24px}
+    .container{max-width:1120px; margin:0 auto}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center}
+    .title{font-size:44px; line-height:1.15; margin:0 0 12px; font-weight:800}
+    .subtitle{font-size:20px; color:var(--muted); margin:0 0 24px}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    .btn{appearance:none; border:0; background:var(--brand); color:#fff; padding:14px 18px; border-radius:14px; font-weight:700; cursor:pointer; box-shadow:0 8px 26px var(--ring); transition:transform .08s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.ghost{background:#222; box-shadow:none; border:1px solid #333}
+    .hero-card{background:var(--card); border:1px solid #1f1f1f; padding:14px; border-radius:var(--radius); box-shadow:var(--shadow)}
+    .hero-card img{display:block; width:100%; height:auto; border-radius:14px}
+
+    /* Socials */
+    .socials{display:flex; gap:14px; margin-top:18px}
+    .socials a{width:42px; height:42px; display:grid; place-items:center; border-radius:10px; background:#1e1e1e; color:#fff; text-decoration:none; border:1px solid #2a2a2a; transition:.2s}
+    .socials a:hover{transform:translateY(-2px); box-shadow:0 8px 24px var(--ring)}
+
+    /* Section headers */
+    .section-h{font-size:34px; margin:0 0 22px; display:flex; align-items:center; gap:10px}
+    .section-h .dot{width:10px; height:10px; border-radius:3px; background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+    .lead{color:var(--muted)}
+
+    /* About */
+    .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px}
+    .card{background:var(--card); border:1px solid #1f1f1f; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+
+    /* Skills */
+    .skills{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
+    .skill{background:#121212; border:1px solid #1f1f1f; border-radius:14px; padding:16px}
+    .skill h4{margin:0 0 10px}
+    .bar{height:10px; border-radius:999px; background:#1d1d1d; overflow:hidden}
+    .bar > span{display:block; height:100%; background:linear-gradient(90deg,var(--brand),#ff784e); border-radius:999px}
+    .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{font-size:12px; padding:8px 10px; border-radius:999px; background:#1c1c1c; border:1px solid #2a2a2a; color:#e6e6e6}
+
+    /* Timeline */
+    .timeline{display:grid; gap:16px}
+    .t-item{display:grid; grid-template-columns:140px 1fr; gap:16px; align-items:start}
+    .t-item .when{color:var(--brand-2); font-weight:800}
+    .t-item .what{background:#121212; border:1px solid #1f1f1f; border-radius:14px; padding:16px}
+    .t-item h4{margin:0 0 6px}
+    .t-item p{margin:0; color:var(--muted)}
+    .t-item ul{margin:8px 0 0 18px}
+
+    /* Projects */
+    .grid-3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+    .project{background:var(--card); border:1px solid #1f1f1f; border-radius:16px; overflow:hidden; display:flex; flex-direction:column}
+    .project img{width:100%; height:180px; object-fit:cover}
+    .project .p-body{padding:16px}
+    .project .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .tag{font-size:12px; padding:6px 10px; border-radius:999px; background:#1d1d1d; border:1px solid #2a2a2a}
+
+    /* Contact */
+    .contact{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+    .contact a{color:#fff; text-decoration:none}
+    .contact .info{display:flex; align-items:center; gap:12px; background:#121212; border:1px solid #1f1f1f; padding:14px 16px; border-radius:14px}
+
+    footer{padding:40px 24px; border-top:1px solid #1f1f1f; text-align:center; color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr;}
+      .about-grid{grid-template-columns:1fr}
+      .skills{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 680px){
+      .sidebar{position:fixed; top:auto; bottom:0; left:0; right:0; width:100%; height:64px; flex-direction:row; justify-content:space-around; padding:8px; border-right:0; border-top:1px solid #262626}
+      .logo{display:none}
+      .wrap{margin:0 0 64px}
+      .nav-link{padding:8px}
+      .nav-link i{font-size:22px}
+      .title{font-size:34px}
+      .grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar / Dock Nav -->
+  <aside class="sidebar">
+    <div class="logo" title="MS"><span>MS</span></div>
+    <a class="nav-link active" href="#home" title="Home"><i class="fa fa-home"></i><small>Home</small></a>
+    <a class="nav-link" href="#about" title="About"><i class="fa fa-user"></i><small>About</small></a>
+    <a class="nav-link" href="#skills" title="Skills"><i class="fa fa-suitcase"></i><small>Skills</small></a>
+    <a class="nav-link" href="#experience" title="Experience"><i class="fa fa-briefcase"></i><small>Exp</small></a>
+    <a class="nav-link" href="#projects" title="Projects"><i class="fa fa-file-code-o"></i><small>Projects</small></a>
+    <a class="nav-link" href="#contact" title="Contact"><i class="fa fa-envelope"></i><small>Contact</small></a>
+  </aside>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div>
+        <h1 class="title">I'm <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">Mariana Shawky</span></h1>
+        <p class="subtitle">Software Tester with a development background (PHP/Laravel, MySQL). I validate quality end‑to‑end: from API testing and functional scenarios to performance‑minded backend fixes.</p>
+        <div class="cta">
+          <a class="btn" href="Mariana-Shawky-CV(2) (3).pdf" target="_blank" download>Download Resume</a>
+          <a class="btn ghost" href="mailto:marianashawky3@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Email me</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/marianashawky" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://wa.me/201225540850" target="_blank" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+          <a href="mailto:marianashawky3@gmail.com" target="_blank" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- keep your current image, you can replace later -->
+        <img src="imgs/WhatsApp Image 2025-08-13 at 3.09.42 PM (1).jpeg" alt="Profile image placeholder"  width="50"height="50"  />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-h"><span class="dot"></span> About Me</h2>
+        <div class="about-grid">
+          <div class="card">
+            <p class="lead">Detail‑oriented QA/Software Tester blending analytical testing with hands‑on development. Comfortable writing test cases, validating APIs with Postman, logging issues with clear reproduction steps, and collaborating tightly with devs to get fixes shipped.</p>
+            <ul>
+              <li><b>Location:</b> Cairo, Egypt</li>
+              <li><b>Role:</b> Software Tester / Junior QA</li>
+              <li><b>Open to:</b> Full‑time · Freelance</li>
+            </ul>
+          </div>
+          <div class="card" style="width:100%;" >
+            <img src="imgs/aboutme3.jfif" alt="About image placeholder" style="width:100%; border-radius:12px"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-h"><span class="dot"></span> Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <h4>Manual & Functional Testing</h4>
+            <div class="bar" aria-label="Manual Testing 90%"><span style="width:90%"></span></div>
+            <div class="chip-row">
+              <span class="chip">Test cases</span>
+              <span class="chip">Regression</span>
+              <span class="chip">Exploratory</span>
+              <span class="chip">UAT</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>API Testing (Postman)</h4>
+            <div class="bar" aria-label="API 85%"><span style="width:85%"></span></div>
+            <div class="chip-row">
+              <span class="chip">Collections</span>
+              <span class="chip">Env Vars</span>
+              <span class="chip">Auth</span>
+              <span class="chip">Assertions</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Bug Tracking</h4>
+            <div class="bar" aria-label="Bug Tracking 80%"><span style="width:80%"></span></div>
+            <div class="chip-row">
+              <span class="chip">Jira</span>
+              <span class="chip">Trello</span>
+              <span class="chip">Agile boards</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Backend & DB</h4>
+            <div class="bar" aria-label="Backend 85%"><span style="width:85%"></span></div>
+            <div class="chip-row">
+              <span class="chip">PHP</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Frontend</h4>
+            <div class="bar" aria-label="Frontend 90%"><span style="width:90%"></span></div>
+            <div class="chip-row">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Soft Skills</h4>
+            <div class="bar" aria-label="Soft Skills 85%"><span style="width:85%"></span></div>
+            <div class="chip-row">
+              <span class="chip">Communication</span>
+              <span class="chip">Problem solving</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Ownership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-h"><span class="dot"></span> Experience</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="when">2025 - Present</div>
+            <div class="what">
+              <h4>Software Tester</h4>
+              <p>Validating product releases with functional & API testing, writing detailed bug reports and working closely with developers to fix regressions fast.</p>
+              <ul>
+                <li>Designed test cases for new features and critical flows.</li>
+                <li>Built Postman collections to verify endpoints and contracts.</li>
+                <li>Partnered with devs to reproduce, triage, and verify fixes.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="when">2023 - 2025</div>
+            <div class="what">
+              <h4>Full‑stack / Backend Developer (Projects)</h4>
+              <p>Laravel + MySQL projects: authentication, dashboards, REST APIs, and performance‑minded SQL queries.</p>
+              <ul>
+                <li>Implemented CRUD APIs and request validation.</li>
+                <li>Optimized queries and added DB indexes to speed up reports.</li>
+                <li>Integrated third‑party services and handled error states.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-h"><span class="dot"></span> Projects</h2>
+    <div class="grid-3">
+
+      <article class="project">
+        <img src="imgs/img1.jpeg" alt="Peacock Concierge" />
+        <div class="p-body">
+          <h4>Peacock Concierge</h4>
+          <p class="lead">
+            Developing and maintaining scalable backend services using Laravel, designing and integrating RESTful APIs, managing relational databases, and integrating third-party services.
+          </p>
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="imgs/img4.jpeg" alt="Rounds" />
+        <div class="p-body">
+          <h4>Rounds</h4>
+          <p class="lead">
+            Full-stack web application using Laravel 7, HTML5, CSS3, and JavaScript with an admin dashboard, API integrations, and deployment via Hostinger & cPanel.
+          </p>
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="imgs/img2.png" alt="Money Master" />
+        <div class="p-body">
+          <h4>Money Master</h4>
+          <p class="lead">
+            APIs for a financial mobile application using Laravel 9, backend logic for user management & transactions, admin panel with Bootstrap, and deployment on Hostinger.
+          </p>
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">REST APIs</span>
+          </div>
+        </div>
+      </article>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-h"><span class="dot"></span> Contact</h2>
+        <div class="contact">
+          <div class="info"><i class="fa fa-envelope"></i><a href="mailto:marianashawky3@gmail.com" target="_blank">marianashawky3@gmail.com</a></div>
+          <div class="info"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank">LinkedIn</a></div>
+          <div class="info"><i class="fa fa-github"></i><a href="https://github.com/marianashawky" target="_blank">GitHub</a></div>
+          <div class="info"><i class="fa fa-whatsapp"></i><a href="https://wa.me/201225540850" target="_blank">WhatsApp</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Mariana Shawky. Built with clean HTML/CSS.
+    </footer>
+  </main>
+
+  <script>
+    // active link switcher on scroll (simple)
+    const sections = [...document.querySelectorAll('section[id]')];
+    const links = [...document.querySelectorAll('.nav-link')];
+    const onScroll = () => {
+      const pos = window.scrollY + 120;
+      let id = 'home';
+      for (const s of sections) {
+        if (pos >= s.offsetTop) id = s.id;
+      }
+      links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
