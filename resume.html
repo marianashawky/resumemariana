@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mariana Shawky — Angular Frontend CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f1c24;
+      --muted: #5a6b75;
+      --accent: #0f8a8c;
+      --line: #d5dee5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Outfit", sans-serif;
+      background: #f5f7fa;
+      line-height: 1.5;
+    }
+    .sheet {
+      width: min(820px, calc(100% - 2rem));
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2.5rem;
+      border: 1px solid var(--line);
+    }
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 2.4rem;
+      line-height: 1.1;
+    }
+    .role {
+      margin: 0.35rem 0 0;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .contacts {
+      margin-top: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.1rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .contacts a { color: inherit; }
+    h2 {
+      margin: 1.75rem 0 0.65rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.35rem;
+    }
+    p, li { color: var(--muted); }
+    .summary { margin: 0.5rem 0 0; max-width: 62ch; }
+    .job { margin-top: 1rem; }
+    .job h3 { margin: 0; font-size: 1.05rem; color: var(--ink); }
+    .when { margin: 0.15rem 0 0.35rem; font-size: 0.88rem; color: var(--accent); font-weight: 600; }
+    ul { margin: 0.35rem 0 0; padding-left: 1.1rem; }
+    .skills { display: grid; gap: 0.35rem; }
+    .skills strong { color: var(--ink); }
+    .actions {
+      width: min(820px, calc(100% - 2rem));
+      margin: 1rem auto 0;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .actions button, .actions a {
+      appearance: none;
+      border: 0;
+      background: var(--ink);
+      color: #fff;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    @media print {
+      body { background: #fff; }
+      .actions { display: none; }
+      .sheet { margin: 0; width: 100%; border: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions">
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    <a href="index.html">Back to portfolio</a>
+  </div>
+
+  <article class="sheet">
+    <header>
+      <h1>Mariana Shawky</h1>
+      <p class="role">Angular Frontend Developer</p>
+      <div class="contacts">
+        <span>Cairo, Egypt</span>
+        <a href="mailto:marianashawky3@gmail.com">marianashawky3@gmail.com</a>
+        <a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198">LinkedIn</a>
+        <a href="https://github.com/marianashawky">GitHub</a>
+        <a href="https://marianashawky.github.io/resumemariana/">Portfolio</a>
+      </div>
+    </header>
+
+    <h2>Summary</h2>
+    <p class="summary">
+      Angular Frontend Developer building modern UI with Angular, TypeScript, HTML, and CSS.
+      Experienced shipping responsive client websites and connecting frontend views to REST APIs,
+      with a quality mindset from testing practice.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><strong>Angular:</strong> Components, Modules, Routing, Services, Forms, Angular CLI</div>
+      <div><strong>Languages:</strong> TypeScript, JavaScript (ES6+), HTML5, CSS3</div>
+      <div><strong>UI:</strong> Flexbox, CSS Grid, Responsive / Mobile-first, CSS Animations</div>
+      <div><strong>Tools:</strong> Git, GitHub, Figma handoff, Browser DevTools, RxJS basics, HTTP / APIs</div>
+      <div><strong>Also familiar:</strong> Bootstrap, PHP, Laravel, MySQL, REST APIs, Postman</div>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Angular Frontend Developer</h3>
+      <p class="when">2025 — Present</p>
+      <ul>
+        <li>Developing Angular components, templates, and routing for structured UI.</li>
+        <li>Using services and HTTP patterns to connect frontend views with REST APIs.</li>
+        <li>Applying TypeScript, forms, and clean component structure for maintainable code.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Frontend Developer — Client Projects</h3>
+      <p class="when">2025 — Present</p>
+      <ul>
+        <li>Built DigiQex orthodontic lab marketing site: hero, case portfolio, process, and portal entry.</li>
+        <li>Shipped PAJOMAR curtains brand website with category flows, trust signals, and clear CTAs.</li>
+        <li>Focused on responsive layout, motion details, and polished UI hierarchy.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Web Developer — Frontend &amp; Full-stack Projects</h3>
+      <p class="when">2023 — 2025</p>
+      <ul>
+        <li>Created responsive pages and admin dashboards with HTML, CSS, JavaScript, and Bootstrap.</li>
+        <li>Connected UI flows to Laravel REST APIs and MySQL data.</li>
+        <li>Improved usability through clearer layouts, validation feedback, and error states.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Software Tester (supporting skill)</h3>
+      <p class="when">2025 — Present</p>
+      <ul>
+        <li>Tested critical user journeys and edge cases before release.</li>
+        <li>Validated APIs with Postman to keep frontend integrations reliable.</li>
+        <li>Wrote clear bug reports and verified fixes with developers.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="job">
+      <h3>DigiQex — Orthodontic Digital Lab</h3>
+      <p class="when">HTML · CSS · JavaScript · <a href="https://abanoubsamir3004.github.io/Dental_FE_website/">Live</a></p>
+      <p>Frontend marketing site for digital orthodontic solutions with case storytelling and multi-section layout.</p>
+    </div>
+    <div class="job">
+      <h3>PAJOMAR — Curtains &amp; Shutters</h3>
+      <p class="when">HTML · CSS · JavaScript · <a href="https://marianashawky.github.io/PAJOMAR/">Live</a></p>
+      <p>Frontend brand landing for ready-made and made-to-measure curtains with shop and custom project CTAs.</p>
+    </div>
+    <div class="job">
+      <h3>Additional UI work</h3>
+      <p>Rounds (dashboard UI) · Money Master (Bootstrap admin) · Peacock Concierge (product support)</p>
+    </div>
+
+    <h2>Certificates</h2>
+    <ul>
+      <li>DEPI — Software Testing (June 2025 – Present)</li>
+      <li>ITI — Fullstack Web Developer using PHP (Feb 2022)</li>
+      <li>ITI — Software Development Fundamentals (Aug 2021)</li>
+      <li>NTI — Web Development PHP/MySQL/Laravel (Mar 2021 · 98%)</li>
+      <li>NTI — Web Design (Nov 2021 · 96%)</li>
+    </ul>
+  </article>
+</body>
+</html>
