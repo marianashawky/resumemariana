@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariana Shawky | Software QA Engineer | 2 Years</title>
-  <meta name="description" content="Mariana Shawky is a Software QA Engineer with 2 years of experience in manual testing, API testing with Postman, and SQL. Based in Cairo and open to remote and hybrid QA roles." />
+  <title>Mariana Shawky | Software Tester | API and Backend QA</title>
+  <meta name="description" content="Mariana Shawky is a Software Tester in Cairo focused on API and backend testing with Postman, SQL, Selenium, Playwright, and TypeScript. Open to remote and hybrid QA roles." />
   <meta name="author" content="Mariana Shawky" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://marianashawky.github.io/resumemariana/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mariana Shawky | Software QA Engineer | 2 Years" />
-  <meta property="og:description" content="2 years of QA experience across manual testing, Postman, SQL, and Selenium. Open to remote and hybrid roles." />
+  <meta property="og:title" content="Mariana Shawky | Software Tester | API and Backend QA" />
+  <meta property="og:description" content="Software Tester focused on API and backend testing with Postman, SQL, Selenium, Playwright, and TypeScript. Open to remote and hybrid QA roles." />
   <meta property="og:url" content="https://marianashawky.github.io/resumemariana/" />
   <meta property="og:image" content="https://marianashawky.github.io/resumemariana/imgs/WhatsApp%20Image%202025-08-13%20at%203.09.42%20PM%20(1).jpeg" />
   <meta name="theme-color" content="#0c4f4a" />
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mariana Shawky",
-    "jobTitle": "Software QA Engineer",
+    "jobTitle": "Software Tester",
     "email": "mailto:marianashawky3@gmail.com",
     "telephone": "+201225540850",
     "url": "https://marianashawky.github.io/resumemariana/",
@@ -100,11 +100,13 @@
     .btn.secondary:hover { background: var(--ink); color: #fff; }
     .socials { display: flex; gap: 16px; margin-top: 16px; font-weight: 650; }
     .socials a { text-decoration: none; }
-    .portrait { position: relative; margin: 0; }
-    .portrait img { width: 100%; height: 520px; object-fit: cover; object-position: center 18%; border-radius: 180px 180px 28px 28px; }
-    .portrait::after { content: ""; position: absolute; inset: 18px -16px -16px 18px; border: 1px solid var(--teal); border-radius: 180px 180px 28px 28px; z-index: -1; }
-    .portrait figcaption { margin-top: 22px; color: var(--muted); font-size: 14px; }
+    .portrait { margin: 0; }
+    .portrait img { width: 100%; height: 540px; object-fit: cover; object-position: center 12%; border-radius: 28px; box-shadow: 0 18px 40px rgba(28, 25, 21, 0.12); }
+    .portrait figcaption { margin: 12px 2px 0; color: var(--muted); font-size: 14px; }
+    .repo-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .repo-links a { color: #fff; font-weight: 650; }
     section { padding: 56px 0; }
+    section[id] { scroll-margin-top: 76px; }
     .section-label { margin: 0 0 8px; color: var(--teal); font-size: 13px; font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; }
     h2 { font-family: Fraunces, Georgia, serif; font-size: 42px; font-weight: 560; line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.03em; }
     .section-lead { margin: 0 0 28px; max-width: 68ch; color: var(--muted); }
@@ -150,20 +152,97 @@
     .contact-grid article { border-top: 1px solid rgba(255,255,255,.2); padding-top: 12px; }
     footer { background: var(--ink); color: #b7ad9f; padding: 0 0 28px; }
     @media (max-width: 900px) {
-      h1 { font-size: 48px; }
-      .hero-grid, .about-grid, .skills, .job, .project, .edu, .contact-grid { grid-template-columns: 1fr; }
-      .portrait img { height: 420px; }
-      .nav-toggle { display: block; }
+      h1 { font-size: 32px; line-height: 1.05; margin: 0; }
+      .hero { padding: 22px 0 8px; }
+      .about-grid, .skills, .job, .project, .edu, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 116px minmax(0, 1fr);
+        column-gap: 16px;
+        align-items: center;
+      }
+      .hero-copy { display: contents; }
+      .portrait {
+        grid-column: 1;
+        grid-row: 2;
+        width: 116px;
+        height: 116px;
+        margin: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        align-self: center;
+        box-shadow: 0 0 0 3px var(--paper), 0 10px 24px rgba(28, 25, 21, 0.16);
+      }
+      .portrait img {
+        width: 397px;
+        max-width: none;
+        height: auto;
+        margin: -75px 0 0 -178px;
+        border-radius: 0;
+        box-shadow: none;
+        object-fit: unset;
+      }
+      .portrait figcaption { display: none; }
+      .kicker { grid-column: 1 / -1; grid-row: 1; margin: 0 0 16px; }
+      .nameplate { grid-column: 2; grid-row: 2; align-self: center; }
+      .role { margin: 2px 0 0; font-size: 16px; }
+      .subtitle, .stats, .intro, .cta, .socials { grid-column: 1 / -1; }
+      .subtitle { margin-top: 18px; }
+      .header-inner { min-height: 64px; }
+      .nav-toggle {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border-radius: 50%;
+        position: relative;
+      }
+      .nav-toggle span:nth-child(-n + 3) {
+        position: absolute;
+        left: 13px;
+        top: 21px;
+        width: 18px;
+        height: 2px;
+        margin: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .nav-toggle span:nth-child(1) { transform: translateY(-6px); }
+      .nav-toggle span:nth-child(2) { transform: none; }
+      .nav-toggle span:nth-child(3) { transform: translateY(6px); }
+      .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg); }
+      .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+      .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg); }
       #site-nav {
-        display: none; position: absolute; left: 0; right: 0; top: 74px;
-        background: var(--cream); border-bottom: 1px solid var(--line);
-        flex-direction: column; align-items: stretch; padding: 8px 16px 16px;
+        display: none;
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 70px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 18px 40px rgba(28, 25, 21, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 8px;
       }
       #site-nav.open { display: flex; }
-      .nav-cv { text-align: center; }
+      #site-nav a { padding: 12px 14px; border-radius: 12px; font-size: 16px; }
+      #site-nav a:hover, #site-nav a.active { background: var(--cream); }
+      #site-nav a.nav-cv,
+      #site-nav a.nav-cv:hover,
+      #site-nav a.nav-cv.active {
+        margin-top: 4px;
+        background: var(--teal);
+        color: #fff;
+        text-align: center;
+        border-radius: 14px;
+      }
     }
     @media (max-width: 640px) {
-      h1 { font-size: 40px; }
+      h1 { font-size: 28px; }
       h2 { font-size: 34px; }
       .wrap, .header-inner { width: min(var(--max), calc(100% - 28px)); }
       .project { padding: 24px; }
@@ -175,7 +254,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#home">Mariana Shawky<small>Software QA Engineer</small></a>
+      <a class="brand" href="#home">Mariana Shawky<small>Software Tester</small></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
         <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Menu</span>
@@ -195,18 +274,23 @@
   <main id="main">
     <section class="hero" id="home">
       <div class="wrap hero-grid">
-        <div>
-          <p class="kicker">Open to remote and hybrid roles</p>
-          <h1>Mariana Shawky</h1>
-          <p class="role">Software QA Engineer</p>
-          <p class="subtitle">Manual Testing | API Testing | SQL | Postman | Selenium</p>
+        <div class="hero-copy">
+          <p class="kicker">Open to remote and hybrid QA roles</p>
+          <div class="nameplate">
+            <h1>Mariana Shawky</h1>
+            <p class="role">Software Tester</p>
+          </div>
+          <p class="subtitle">API and Backend Testing | Postman | SQL | Selenium | Playwright | TypeScript</p>
           <ul class="stats">
-            <li>2 years of QA experience</li>
+            <li>API testing</li>
+            <li>Automation testing</li>
             <li>Postman</li>
             <li>SQL</li>
-            <li>Selenium</li>
+            <li>Jira</li>
+            <li>Playwright</li>
+            <li>TypeScript</li>
           </ul>
-          <p class="intro">I am a Software QA Engineer with 2 years of experience in web application testing, API validation, database verification, and business logic testing. My backend development background helps me understand application architecture, identify complex issues, and ensure reliable software quality.</p>
+          <p class="intro">I am a Software Tester focused on API and backend testing. I check web applications, REST APIs, and the database records behind them. My employment titles are in software development, and that Laravel and MySQL background is how I trace a defect from the request into the data.</p>
           <div class="cta">
             <a class="btn primary" href="Mariana-Shawky-QA-Engineer-CV.pdf" download>Download CV</a>
             <a class="btn secondary" href="#projects">View Projects</a>
@@ -228,17 +312,17 @@
       <div class="wrap about-grid">
         <div>
           <p class="section-label">01 — About</p>
-          <h2>Two years spent on the quality of the release.</h2>
-          <p>Since November 2024 I have worked as a Software QA Engineer, first at Rounds and now at Peacock Concierge. I test web flows, APIs, and the database records behind them, then write the defect clearly enough for a developer to fix it.</p>
-          <p>Laravel and SQL are how I get there faster. I can follow a request into the table, compare a wallet balance with the business rule, and see whether the bug is in the API, the data, or the scenario.</p>
-          <p>Before that I built software. Those earlier roles are listed separately, so the 2 years of QA experience stay easy to see.</p>
+          <h2>I test the API, then I check the database.</h2>
+          <p>I want QA work that sits close to the backend. I use Postman to confirm what an endpoint returns, then SQL to see whether the record matches the business rule.</p>
+          <p>My current job title is Backend Developer at Peacock Concierge. Testing there sits inside that role: web and API checks, regression, and defect notes. The same is true of my earlier development jobs. The titles and dates below match my CV.</p>
+          <p>The public proof of testing work is the DEPI OrangeHRM project, with test cases, a bug report, and Selenium automation in the team repository.</p>
         </div>
         <aside>
           <ul class="facts">
-            <li><span>QA experience</span> 2 years, Nov 2024 – present</li>
-            <li><span>Current role</span> Software QA Engineer, Peacock Concierge</li>
+            <li><span>Target role</span> QA Engineer, API and backend testing</li>
+            <li><span>Current title</span> Backend Developer, Peacock Concierge</li>
             <li><span>Location</span> Shobra, Cairo, Egypt</li>
-            <li><span>Open to</span> Junior and mid-level, remote and hybrid</li>
+            <li><span>Open to</span> Remote and hybrid, Egypt and international teams</li>
             <li><span>Degree</span> BSc Accounting, Cairo University</li>
           </ul>
         </aside>
@@ -249,31 +333,35 @@
       <div class="wrap">
         <p class="section-label">02 — Skills</p>
         <h2>How I test.</h2>
-        <p class="section-lead">Automation is foundational and was practiced on the DEPI OrangeHRM team project. Selenium on my earlier CV was listed as basic knowledge.</p>
+        <p class="section-lead">These are the skills I can explain and apply. Selenium is foundational and was used on the DEPI team project. Automation testing also includes Playwright and TypeScript.</p>
         <div class="skills">
           <article class="skill">
             <h3>Manual testing</h3>
-            <p>Functional, regression, smoke, and sanity testing. Test cases, test scenarios, bug reporting, and edge-case testing.</p>
+            <p>Functional testing, regression testing, and exploratory testing.</p>
           </article>
           <article class="skill">
-            <h3>API testing</h3>
-            <p>Postman, REST APIs, HTTP methods, status codes, and JSON validation.</p>
+            <h3>API</h3>
+            <p>Postman, REST APIs, and JSON validation.</p>
           </article>
           <article class="skill">
-            <h3>Database testing</h3>
-            <p>MySQL and SQL, including SELECT, JOIN, GROUP BY, and data-integrity checks.</p>
+            <h3>Database</h3>
+            <p>SQL and MySQL, including checks that the stored data matches the API result.</p>
           </article>
           <article class="skill">
-            <h3>Automation</h3>
-            <p>Selenium WebDriver, TestNG, Maven, and Allure Reports.</p>
+            <h3>Bug tracking</h3>
+            <p>Jira.</p>
           </article>
           <article class="skill">
-            <h3>Tools</h3>
-            <p>Jira, Trello, Git, GitHub, and Postman.</p>
+            <h3>Testing documentation</h3>
+            <p>Test cases and test plans, practiced on the OrangeHRM team project.</p>
           </article>
           <article class="skill">
-            <h3>Also used in delivery</h3>
-            <p>PHP, Laravel 7–10, JavaScript, HTML, CSS, Bootstrap, and jQuery.</p>
+            <h3>Automation testing</h3>
+            <p>Playwright and TypeScript for web UI automation, locators and assertions, cross-browser testing, and automated test case design.</p>
+          </article>
+          <article class="skill">
+            <h3>Automation and technical</h3>
+            <p>Selenium WebDriver, TestNG, and Allure Reports. Git, GitHub, and JavaScript. PHP and Laravel 7–10 from development work.</p>
           </article>
         </div>
       </div>
@@ -282,8 +370,8 @@
     <section id="experience">
       <div class="wrap">
         <p class="section-label">03 — Experience</p>
-        <h2>QA experience, 2 years.</h2>
-        <p class="section-lead">November 2024 to the present. Company names stay the same. The QA title covers this window only.</p>
+        <h2>Employment, with the titles on my CV.</h2>
+        <p class="section-lead">These are the job titles, companies, and dates from my CV. Testing listed here was part of the development work, not a separate QA title.</p>
         <div class="timeline">
           <article class="job">
             <div>
@@ -292,102 +380,89 @@
             </div>
             <div>
               <h3>Peacock Concierge</h3>
-              <p class="title">Software QA Engineer</p>
+              <p class="title">Backend Developer</p>
               <ul>
-                <li>Test web and API modules for a Laravel product used by web and mobile clients, including regression passes before release.</li>
-                <li>Validate REST APIs in Postman, including methods, status codes, JSON responses, and third-party services such as SMS gateways.</li>
-                <li>Check database integrity and financial transaction and wallet calculations with SQL.</li>
-                <li>Write defect reports, retest fixes with developers, and follow the change in Git.</li>
+                <li>Develop and maintain Laravel backend services and REST APIs for web and mobile applications.</li>
+                <li>Write SQL, manage relational data, and integrate third-party services such as SMS gateways.</li>
+                <li>Test web and API modules, validate requests in Postman, check database integrity, and regression-test changes.</li>
+                <li>Document defects, retest fixes, and check financial transaction and wallet calculations.</li>
               </ul>
             </div>
           </article>
           <article class="job">
             <div>
-              <p class="when">Nov 2024 – Jan 2025</p>
+              <p class="when">Aug 2023 – Jan 2025</p>
               <p class="where">Saudi Arabia</p>
             </div>
             <div>
               <h3>Rounds</h3>
-              <p class="title">Software QA Engineer</p>
+              <p class="title">Full-stack Developer</p>
               <ul>
-                <li>Functionally tested admin dashboard features and checked business rules before release.</li>
-                <li>Validated APIs and ran smoke tests after production updates on rounds.run/admin.</li>
+                <li>Built a Laravel 7 application with HTML, CSS, and JavaScript, including the admin dashboard at rounds.run/admin.</li>
+                <li>Integrated third-party APIs and deployed with Hostinger and cPanel.</li>
+                <li>Functionally tested admin features, validated APIs, checked business rules, and ran smoke tests after production updates.</li>
               </ul>
             </div>
           </article>
-        </div>
-
-        <div class="earlier">
-          <h2>Earlier development.</h2>
-          <p class="section-lead">These roles came before the QA window. They are why I can read the system I am testing.</p>
-          <div class="timeline">
-            <article class="job">
-              <div>
-                <p class="when">Aug 2023 – Oct 2024</p>
-                <p class="where">Saudi Arabia</p>
-              </div>
-              <div>
-                <h3>Rounds</h3>
-                <p class="title">Full-stack Developer</p>
-                <ul>
-                  <li>Built a Laravel 7 application with HTML, CSS, and JavaScript, including the admin dashboard at rounds.run/admin.</li>
-                  <li>Integrated third-party APIs and deployed with Hostinger and cPanel.</li>
-                </ul>
-              </div>
-            </article>
-            <article class="job">
-              <div>
-                <p class="when">Jan 2022 – Mar 2023</p>
-                <p class="where">Maadi, Cairo</p>
-              </div>
-              <div>
-                <h3>Money Master</h3>
-                <p class="title">Full-stack Developer</p>
-                <ul>
-                  <li>Built Laravel 9 APIs for user management and financial transactions, plus an admin panel with Laravel and Bootstrap.</li>
-                  <li>Deployed on Hostinger and cPanel, and checked transactions against API responses and database records.</li>
-                </ul>
-              </div>
-            </article>
-            <article class="job">
-              <div>
-                <p class="when">Feb 2022 – Mar 2022</p>
-                <p class="where">Internship</p>
-              </div>
-              <div>
-                <h3>Orange</h3>
-                <p class="title">Backend Intern</p>
-                <ul>
-                  <li>Built an API for the ODC Learning System and an admin panel with Laravel 8.</li>
-                  <li>Functionally tested the API and admin flows as part of that delivery.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
+          <article class="job">
+            <div>
+              <p class="when">Jan 2022 – Mar 2023</p>
+              <p class="where">Maadi, Cairo</p>
+            </div>
+            <div>
+              <h3>Money Master</h3>
+              <p class="title">Full-stack Developer</p>
+              <ul>
+                <li>Built Laravel 9 APIs for user management and financial transactions, plus an admin panel with Laravel and Bootstrap.</li>
+                <li>Deployed on Hostinger and cPanel.</li>
+                <li>Checked financial transactions against API responses and database records while building those flows.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div>
+              <p class="when">Feb 2022 – Mar 2022</p>
+              <p class="where">Internship</p>
+            </div>
+            <div>
+              <h3>Orange</h3>
+              <p class="title">Backend Intern</p>
+              <ul>
+                <li>Built an API for the ODC Learning System and an admin panel with Laravel 8.</li>
+                <li>Functionally tested the API and admin flows as part of that delivery.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <p class="section-label">04 — Project</p>
-        <h2>A public QA project I can share.</h2>
-        <p class="section-lead">Employment work is not in a personal GitHub repository. This is the team project where my commits are public.</p>
+        <p class="section-label">04 — QA and testing projects</p>
+        <h2>Testing work with files a recruiter can open.</h2>
+        <p class="section-lead">Peacock Concierge, Rounds, and Money Master stay in Experience because they were development jobs and are not in a public test repository. This is the testing project with public test cases, a bug report, and automation.</p>
         <article class="project">
           <div>
             <h3>OrangeHRM — manual testing and test automation</h3>
-            <p><strong>Team contributor, DEPI, 2025.</strong> The repository is owned by Youssef Zaafan. I have 16 commits. I did not create the repository alone.</p>
-            <p>My commits include the login page object, login test cases, a TestNG data provider, dashboard page updates, Maven configuration, and documentation edits.</p>
-            <p>The team also covered manual test cases, bug reports, and the Login, Admin, PIM, My Info, and Leave modules with Jira, Selenium WebDriver, TestNG, Maven, and Allure Reports.</p>
+            <p><strong>Team contributor, DEPI, completed December 2025.</strong> The repository is owned by Youssef Zaafan. I have 16 commits. I did not create it alone.</p>
+            <p>My commits are the login page object, login test cases, a TestNG data provider, dashboard page updates, Maven configuration, and documentation edits.</p>
+            <p>The repository also holds the team test-case report, bug report, and Selenium automation for Login, Admin, PIM, My Info, and Leave. Jira was the project tracker.</p>
             <ul class="tags">
-              <li>Login automation</li>
+              <li>Test cases</li>
+              <li>Bug report</li>
+              <li>Regression scope</li>
               <li>Selenium</li>
               <li>TestNG</li>
-              <li>Maven</li>
               <li>Allure</li>
               <li>Jira</li>
             </ul>
-            <a class="btn" href="https://github.com/youssefzaafan/DEPI-Graduation-Project/" target="_blank" rel="noopener noreferrer">View team repository</a>
+            <ul class="repo-links">
+              <li><a href="https://github.com/youssefzaafan/DEPI-Graduation-Project/" target="_blank" rel="noopener noreferrer">Repository</a></li>
+              <li><a href="https://github.com/youssefzaafan/DEPI-Graduation-Project/blob/main/Manual%20Testing/testcaseReport.html" target="_blank" rel="noopener noreferrer">Test cases</a></li>
+              <li><a href="https://github.com/youssefzaafan/DEPI-Graduation-Project/blob/main/Manual%20Testing/BugReport.html" target="_blank" rel="noopener noreferrer">Bug report</a></li>
+              <li><a href="https://github.com/youssefzaafan/DEPI-Graduation-Project/tree/main/Automation%20Testing" target="_blank" rel="noopener noreferrer">Automation</a></li>
+            </ul>
           </div>
           <aside class="side">
             <h3>Committed by me</h3>
@@ -413,7 +488,7 @@
         <div>
           <p class="section-label">Training</p>
           <ul class="cert-list">
-            <li><strong>DEPI</strong> — Software Testing, June 2025 – December 2025</li>
+            <li><strong>DEPI</strong> — Software Testing, completed December 2025 (June 2025 – December 2025)</li>
             <li><strong>ITI</strong> — Full Stack Web Developer using PHP, completed February 2022</li>
             <li><strong>ITI</strong> — Software Development Fundamentals, completed August 2021</li>
             <li><strong>NTI</strong> — Web Development using PHP, MySQL, and Laravel, March 2021, score 98%</li>
@@ -452,7 +527,7 @@
     </section>
   </main>
   <footer>
-    <div class="wrap">© <span id="year"></span> Mariana Shawky · Software QA Engineer</div>
+    <div class="wrap">© <span id="year"></span> Mariana Shawky · Software Tester</div>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
