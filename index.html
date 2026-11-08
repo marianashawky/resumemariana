@@ -3,422 +3,481 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariana Shawky — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="imgs/boy3.png">
+  <title>Mariana Shawky | Software QA Engineer | 2 Years</title>
+  <meta name="description" content="Mariana Shawky is a Software QA Engineer with 2 years of experience in manual testing, API testing with Postman, and SQL. Based in Cairo and open to remote and hybrid QA roles." />
+  <meta name="author" content="Mariana Shawky" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://marianashawky.github.io/resumemariana/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mariana Shawky | Software QA Engineer | 2 Years" />
+  <meta property="og:description" content="2 years of QA experience across manual testing, Postman, SQL, and Selenium. Open to remote and hybrid roles." />
+  <meta property="og:url" content="https://marianashawky.github.io/resumemariana/" />
+  <meta property="og:image" content="https://marianashawky.github.io/resumemariana/imgs/WhatsApp%20Image%202025-08-13%20at%203.09.42%20PM%20(1).jpeg" />
+  <meta name="theme-color" content="#0c4f4a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230c4f4a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='white'%3EMS%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&amp;family=Outfit:wght@400;500;650&amp;display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mariana Shawky",
+    "jobTitle": "Software QA Engineer",
+    "email": "mailto:marianashawky3@gmail.com",
+    "telephone": "+201225540850",
+    "url": "https://marianashawky.github.io/resumemariana/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" },
+    "sameAs": [
+      "https://www.linkedin.com/in/mariana-shawky-5a37a4198/",
+      "https://github.com/marianashawky"
+    ]
+  }
+  </script>
   <style>
-    :root{
-      --bg:#000;
-      --panel:#111;
-      --text:#f5f5f5;
-      --muted:#bdbdbd;
-      --brand:#ff5722; /* orangered vibe */
-      --brand-2:#ffc107;
-      --card:#161616;
-      --ring: rgba(255, 87, 34, .35);
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    :root {
+      --ink: #1c1915;
+      --teal: #0c4f4a;
+      --teal-2: #14675f;
+      --cream: #f6f1e8;
+      --paper: #fffdf8;
+      --sand: #ebe3d4;
+      --muted: #5c564c;
+      --line: #ddd4c4;
+      --max: 1120px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; background:var(--bg); color:var(--text); font-family:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Do Hyeon", sans-serif; overflow-x:hidden;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Outfit, "Segoe UI", sans-serif;
+      font-size: 17.5px;
+      line-height: 1.6;
     }
-
-    /* Sidebar */
-    .sidebar{
-      position:fixed; inset:0 auto 0 0; width:100px; background:#1b1b1b; display:flex; flex-direction:column; align-items:center; gap:18px; padding:18px 10px; border-right:1px solid #262626; z-index:50;
+    img { max-width: 100%; display: block; }
+    a { color: var(--teal); }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--teal); color: #fff; padding: 8px 12px; z-index: 20; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(246, 241, 232, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
     }
-    .logo{display:grid; place-items:center; width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--brand),#ff784e); box-shadow:0 6px 20px var(--ring); font-weight:800; letter-spacing:.5px}
-    .logo span{font-size:.8rem}
-    .nav-link{width:100%; text-align:center; color:var(--muted); text-decoration:none; padding:14px 8px; border-radius:12px; transition:.2s ease; display:flex; flex-direction:column; align-items:center; gap:6px}
-    .nav-link i{font-size:28px}
-    .nav-link:hover,.nav-link.active{color:#fff; background:#232323}
-
-    /* Main wrapper */
-    .wrap{margin-left:100px; min-height:100%;}
-
-    /* Hero */
-    section{padding:64px 24px}
-    .container{max-width:1120px; margin:0 auto}
-    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center}
-    .title{font-size:44px; line-height:1.15; margin:0 0 12px; font-weight:800}
-    .subtitle{font-size:20px; color:var(--muted); margin:0 0 24px}
-    .cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
-    .btn{appearance:none; border:0; background:var(--brand); color:#fff; padding:14px 18px; border-radius:14px; font-weight:700; cursor:pointer; box-shadow:0 8px 26px var(--ring); transition:transform .08s ease, box-shadow .2s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.ghost{background:#222; box-shadow:none; border:1px solid #333}
-    .hero-card{background:var(--card); border:1px solid #1f1f1f; padding:14px; border-radius:var(--radius); box-shadow:var(--shadow)}
-    .hero-card img{display:block; width:100%; height:auto; border-radius:14px}
-
-    /* Socials */
-    .socials{display:flex; gap:14px; margin-top:18px}
-    .socials a{width:42px; height:42px; display:grid; place-items:center; border-radius:10px; background:#1e1e1e; color:#fff; text-decoration:none; border:1px solid #2a2a2a; transition:.2s}
-    .socials a:hover{transform:translateY(-2px); box-shadow:0 8px 24px var(--ring)}
-
-    /* Section headers */
-    .section-h{font-size:34px; margin:0 0 22px; display:flex; align-items:center; gap:10px}
-    .section-h .dot{width:10px; height:10px; border-radius:3px; background:linear-gradient(135deg,var(--brand),var(--brand-2))}
-    .lead{color:var(--muted)}
-
-    /* About */
-    .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px}
-    .card{background:var(--card); border:1px solid #1f1f1f; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-
-    /* Skills */
-    .skills{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
-    .skill{background:#121212; border:1px solid #1f1f1f; border-radius:14px; padding:16px}
-    .skill h4{margin:0 0 10px}
-    .bar{height:10px; border-radius:999px; background:#1d1d1d; overflow:hidden}
-    .bar > span{display:block; height:100%; background:linear-gradient(90deg,var(--brand),#ff784e); border-radius:999px}
-    .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .chip{font-size:12px; padding:8px 10px; border-radius:999px; background:#1c1c1c; border:1px solid #2a2a2a; color:#e6e6e6}
-
-    /* Timeline */
-    .timeline{display:grid; gap:16px}
-    .t-item{display:grid; grid-template-columns:140px 1fr; gap:16px; align-items:start}
-    .t-item .when{color:var(--brand-2); font-weight:800}
-    .t-item .what{background:#121212; border:1px solid #1f1f1f; border-radius:14px; padding:16px}
-    .t-item h4{margin:0 0 6px}
-    .t-item p{margin:0; color:var(--muted)}
-    .t-item ul{margin:8px 0 0 18px}
-
-    /* Projects */
-    .grid-3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
-    .project{background:var(--card); border:1px solid #1f1f1f; border-radius:16px; overflow:hidden; display:flex; flex-direction:column}
-    .project img{width:100%; height:180px; object-fit:cover}
-    .project .p-body{padding:16px}
-    .project .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
-    .tag{font-size:12px; padding:6px 10px; border-radius:999px; background:#1d1d1d; border:1px solid #2a2a2a}
-
-    /* Contact */
-    .contact{display:grid; grid-template-columns:1fr 1fr; gap:22px}
-    .contact a{color:#fff; text-decoration:none}
-    .contact .info{display:flex; align-items:center; gap:12px; background:#121212; border:1px solid #1f1f1f; padding:14px 16px; border-radius:14px}
-
-    footer{padding:40px 24px; border-top:1px solid #1f1f1f; text-align:center; color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr;}
-      .about-grid{grid-template-columns:1fr}
-      .skills{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr 1fr}
-      .contact{grid-template-columns:1fr}
+    .header-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto; min-height: 74px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
-    @media (max-width: 680px){
-      .sidebar{position:fixed; top:auto; bottom:0; left:0; right:0; width:100%; height:64px; flex-direction:row; justify-content:space-around; padding:8px; border-right:0; border-top:1px solid #262626}
-      .logo{display:none}
-      .wrap{margin:0 0 64px}
-      .nav-link{padding:8px}
-      .nav-link i{font-size:22px}
-      .title{font-size:34px}
-      .grid-3{grid-template-columns:1fr}
+    .brand { text-decoration: none; color: var(--ink); font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 560; }
+    .brand small { display: block; font-family: Outfit, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); font-weight: 650; }
+    .nav-toggle { display: none; border: 1px solid var(--line); background: var(--paper); border-radius: 8px; padding: 8px 10px; }
+    .nav-toggle span { display: block; width: 18px; height: 2px; background: var(--ink); margin: 4px 0; }
+    #site-nav { display: flex; align-items: center; gap: 6px; }
+    #site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 15px; padding: 8px 10px; }
+    #site-nav a:hover, #site-nav a.active { color: var(--teal); }
+    .nav-cv { background: var(--teal); color: #fff !important; border-radius: 999px; }
+    .nav-cv:hover { background: var(--teal-2); }
+    .hero { padding: 48px 0 20px; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: end; }
+    .kicker { margin: 0 0 14px; color: var(--teal); font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; }
+    h1 { font-family: Fraunces, Georgia, serif; font-size: 68px; line-height: 0.95; font-weight: 560; margin: 0 0 14px; letter-spacing: -0.03em; }
+    .role { margin: 0; font-size: 22px; font-weight: 650; }
+    .subtitle { margin: 6px 0 18px; color: var(--muted); }
+    .intro { margin: 0 0 22px; max-width: 58ch; }
+    .stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .stats li { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 14px; font-weight: 650; }
+    .stats li:first-child { background: var(--teal); color: #fff; border-color: var(--teal); }
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 650; border: 1px solid transparent; }
+    .btn.primary { background: var(--ink); color: #fff; }
+    .btn.primary:hover { background: var(--teal); color: #fff; }
+    .btn.secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn.secondary:hover { background: var(--ink); color: #fff; }
+    .socials { display: flex; gap: 16px; margin-top: 16px; font-weight: 650; }
+    .socials a { text-decoration: none; }
+    .portrait { position: relative; margin: 0; }
+    .portrait img { width: 100%; height: 520px; object-fit: cover; object-position: center 18%; border-radius: 180px 180px 28px 28px; }
+    .portrait::after { content: ""; position: absolute; inset: 18px -16px -16px 18px; border: 1px solid var(--teal); border-radius: 180px 180px 28px 28px; z-index: -1; }
+    .portrait figcaption { margin-top: 22px; color: var(--muted); font-size: 14px; }
+    section { padding: 56px 0; }
+    .section-label { margin: 0 0 8px; color: var(--teal); font-size: 13px; font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: Fraunces, Georgia, serif; font-size: 42px; font-weight: 560; line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.03em; }
+    .section-lead { margin: 0 0 28px; max-width: 68ch; color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 28px; align-items: start; }
+    .about-grid p { margin: 0 0 14px; }
+    .facts { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 14px; }
+    .facts span { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); font-weight: 650; }
+    .band { background: var(--paper); border-block: 1px solid var(--line); }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+    .skill { padding: 18px 0; border-top: 1px solid var(--line); }
+    .skill h3 { margin: 0 0 6px; font-size: 18px; }
+    .skill p { margin: 0; color: var(--muted); }
+    .timeline { display: grid; gap: 0; }
+    .job { display: grid; grid-template-columns: 180px 1fr; gap: 22px; padding: 22px 0; border-top: 1px solid var(--line); }
+    .when { margin: 0; color: var(--teal); font-weight: 650; }
+    .where { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    .job h3 { margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 560; }
+    .job .title { margin: 2px 0 8px; font-weight: 650; }
+    .job ul { margin: 0; padding-left: 18px; }
+    .earlier { margin-top: 36px; }
+    .project {
+      background: var(--teal); color: #f4f7f6;
+      border-radius: 28px; padding: 36px;
+      display: grid; grid-template-columns: 1.4fr 0.7fr; gap: 28px;
     }
+    .project h3 { font-family: Fraunces, Georgia, serif; font-size: 34px; font-weight: 560; margin: 0 0 8px; }
+    .project a { color: #fff; }
+    .project .btn { background: #fff; color: var(--teal); }
+    .project .btn:hover { background: var(--cream); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; padding: 0; list-style: none; }
+    .tags li { border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 10px; font-size: 14px; }
+    .side h3 { margin-top: 0; font-size: 18px; }
+    .edu { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 32px; }
+    .cert-list { list-style: none; margin: 0; padding: 0; }
+    .cert-list li { padding: 12px 0; border-top: 1px solid var(--line); }
+    .contact-band { background: var(--ink); color: #f6f1e8; }
+    .contact-band h2, .contact-band .section-label { color: #fff; }
+    .contact-band .section-lead { color: #d9d0c2; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+    .contact-grid span { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #c9bfb1; font-weight: 650; }
+    .contact-grid p { margin: 2px 0 14px; }
+    .contact-grid a { color: #fff; font-weight: 650; text-decoration: none; }
+    .contact-grid article { border-top: 1px solid rgba(255,255,255,.2); padding-top: 12px; }
+    footer { background: var(--ink); color: #b7ad9f; padding: 0 0 28px; }
+    @media (max-width: 900px) {
+      h1 { font-size: 48px; }
+      .hero-grid, .about-grid, .skills, .job, .project, .edu, .contact-grid { grid-template-columns: 1fr; }
+      .portrait img { height: 420px; }
+      .nav-toggle { display: block; }
+      #site-nav {
+        display: none; position: absolute; left: 0; right: 0; top: 74px;
+        background: var(--cream); border-bottom: 1px solid var(--line);
+        flex-direction: column; align-items: stretch; padding: 8px 16px 16px;
+      }
+      #site-nav.open { display: flex; }
+      .nav-cv { text-align: center; }
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 34px; }
+      .wrap, .header-inner { width: min(var(--max), calc(100% - 28px)); }
+      .project { padding: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <!-- Sidebar / Dock Nav -->
-  <aside class="sidebar">
-    <a class="nav-link active" href="#home" title="Home"><i class="fa fa-home"></i><small>Home</small></a>
-    <a class="nav-link" href="#about" title="About"><i class="fa fa-user"></i><small>About</small></a>
-    <a class="nav-link" href="#skills" title="Skills"><i class="fa fa-suitcase"></i><small>Skills</small></a>
-    <a class="nav-link" href="#experience" title="Experience"><i class="fa fa-briefcase"></i><small>Exp</small></a>
-   
-   <a class="nav-link" href="#projects" title="Projects"><i class="fa fa-file-code-o"></i><small>Projects</small></a>
-       <a class="nav-link" href="#certificates"><i class="fa fa-certificate"></i><small>Certificates</small></a>
-    <a class="nav-link" href="#contact" title="Contact"><i class="fa fa-envelope"></i><small>Contact</small></a>
-  </aside>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home">Mariana Shawky<small>Software QA Engineer</small></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Menu</span>
+      </button>
+      <nav id="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cv" href="Mariana-Shawky-QA-Engineer-CV.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section id="home" class="hero container">
-      <div>
-        <h1 class="title">I'm <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">Mariana Shawky</span></h1>
-        <p class="subtitle">Software Tester with a development background (PHP/Laravel, MySQL). I validate quality end‑to‑end: from API testing and functional scenarios to performance‑minded backend fixes.</p>
-        <div class="cta">
-          <a class="btn" href="Mariana-Shawky-CV(2) (3).pdf" target="_blank" download>Download Resume</a>
-          <a class="btn ghost" href="mailto:marianashawky3@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Email me</a>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Open to remote and hybrid roles</p>
+          <h1>Mariana Shawky</h1>
+          <p class="role">Software QA Engineer</p>
+          <p class="subtitle">Manual Testing | API Testing | SQL | Postman | Selenium</p>
+          <ul class="stats">
+            <li>2 years of QA experience</li>
+            <li>Postman</li>
+            <li>SQL</li>
+            <li>Selenium</li>
+          </ul>
+          <p class="intro">I am a Software QA Engineer with 2 years of experience in web application testing, API validation, database verification, and business logic testing. My backend development background helps me understand application architecture, identify complex issues, and ensure reliable software quality.</p>
+          <div class="cta">
+            <a class="btn primary" href="Mariana-Shawky-QA-Engineer-CV.pdf" download>Download CV</a>
+            <a class="btn secondary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/marianashawky" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
-        <div class="socials">
-          <a href="https://github.com/marianashawky" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-          <a href="https://wa.me/201225540850" target="_blank" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
-          <a href="mailto:marianashawky3@gmail.com" target="_blank" aria-label="Email"><i class="fa fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <!-- keep your current image, you can replace later -->
-        <img src="imgs/WhatsApp Image 2025-08-13 at 3.09.42 PM (1).jpeg" alt="Profile image placeholder"  width="50"height="50"  />
+        <figure class="portrait">
+          <img src="imgs/WhatsApp Image 2025-08-13 at 3.09.42 PM (1).jpeg" alt="Mariana Shawky" width="640" height="800" />
+          <figcaption>Shobra, Cairo, Egypt</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
-      <div class="container">
-        <h2 class="section-h"><span class="dot"></span> About Me</h2>
-        <div class="about-grid">
-          <div class="card">
-            <p class="lead">Detail‑oriented QA/Software Tester blending analytical testing with hands‑on development. Comfortable writing test cases, validating APIs with Postman, logging issues with clear reproduction steps, and collaborating tightly with devs to get fixes shipped.</p>
-            <ul>
-              <li><b>Location:</b> Cairo, Egypt</li>
-              <li><b>Role:</b> Software Tester / Junior QA</li>
-              <li><b>Open to:</b> Full‑time · Freelance</li>
-            </ul>
-          </div>
-          <div class="card" style="width:100%;" >
-            <img src="imgs/aboutme3.jfif" alt="About image placeholder" style="width:100%; border-radius:12px"/>
-          </div>
+      <div class="wrap about-grid">
+        <div>
+          <p class="section-label">01 — About</p>
+          <h2>Two years spent on the quality of the release.</h2>
+          <p>Since November 2024 I have worked as a Software QA Engineer, first at Rounds and now at Peacock Concierge. I test web flows, APIs, and the database records behind them, then write the defect clearly enough for a developer to fix it.</p>
+          <p>Laravel and SQL are how I get there faster. I can follow a request into the table, compare a wallet balance with the business rule, and see whether the bug is in the API, the data, or the scenario.</p>
+          <p>Before that I built software. Those earlier roles are listed separately, so the 2 years of QA experience stay easy to see.</p>
         </div>
+        <aside>
+          <ul class="facts">
+            <li><span>QA experience</span> 2 years, Nov 2024 – present</li>
+            <li><span>Current role</span> Software QA Engineer, Peacock Concierge</li>
+            <li><span>Location</span> Shobra, Cairo, Egypt</li>
+            <li><span>Open to</span> Junior and mid-level, remote and hybrid</li>
+            <li><span>Degree</span> BSc Accounting, Cairo University</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-h"><span class="dot"></span> Skills</h2>
+    <section class="band" id="skills">
+      <div class="wrap">
+        <p class="section-label">02 — Skills</p>
+        <h2>How I test.</h2>
+        <p class="section-lead">Automation is foundational and was practiced on the DEPI OrangeHRM team project. Selenium on my earlier CV was listed as basic knowledge.</p>
         <div class="skills">
-          <div class="skill">
-            <h4>Manual & Functional Testing</h4>
-            <div class="bar" aria-label="Manual Testing 90%"><span style="width:90%"></span></div>
-            <div class="chip-row">
-              <span class="chip">Test cases</span>
-              <span class="chip">Regression</span>
-              <span class="chip">Exploratory</span>
-              <span class="chip">UAT</span>
-            </div>
-          </div>
-          <div class="skill">
-            <h4>API Testing (Postman)</h4>
-            <div class="bar" aria-label="API 85%"><span style="width:85%"></span></div>
-            <div class="chip-row">
-              <span class="chip">Collections</span>
-              <span class="chip">Env Vars</span>
-              <span class="chip">Auth</span>
-              <span class="chip">Assertions</span>
-            </div>
-          </div>
-          <div class="skill">
-            <h4>Bug Tracking</h4>
-            <div class="bar" aria-label="Bug Tracking 80%"><span style="width:80%"></span></div>
-            <div class="chip-row">
-              <span class="chip">Jira</span>
-              <span class="chip">Trello</span>
-              <span class="chip">Agile boards</span>
-            </div>
-          </div>
-          <div class="skill">
-            <h4>Backend & DB</h4>
-            <div class="bar" aria-label="Backend 85%"><span style="width:85%"></span></div>
-            <div class="chip-row">
-              <span class="chip">PHP</span>
-              <span class="chip">Laravel</span>
-              <span class="chip">MySQL</span>
-              <span class="chip">REST APIs</span>
-            </div>
-          </div>
-          <div class="skill">
-            <h4>Frontend</h4>
-            <div class="bar" aria-label="Frontend 90%"><span style="width:90%"></span></div>
-            <div class="chip-row">
-              <span class="chip">HTML</span>
-              <span class="chip">CSS</span>
-              <span class="chip">JavaScript</span>
-            </div>
-          </div>
-          <div class="skill">
-            <h4>Soft Skills</h4>
-            <div class="bar" aria-label="Soft Skills 85%"><span style="width:85%"></span></div>
-            <div class="chip-row">
-              <span class="chip">Communication</span>
-              <span class="chip">Problem solving</span>
-              <span class="chip">Teamwork</span>
-              <span class="chip">Ownership</span>
-            </div>
-          </div>
+          <article class="skill">
+            <h3>Manual testing</h3>
+            <p>Functional, regression, smoke, and sanity testing. Test cases, test scenarios, bug reporting, and edge-case testing.</p>
+          </article>
+          <article class="skill">
+            <h3>API testing</h3>
+            <p>Postman, REST APIs, HTTP methods, status codes, and JSON validation.</p>
+          </article>
+          <article class="skill">
+            <h3>Database testing</h3>
+            <p>MySQL and SQL, including SELECT, JOIN, GROUP BY, and data-integrity checks.</p>
+          </article>
+          <article class="skill">
+            <h3>Automation</h3>
+            <p>Selenium WebDriver, TestNG, Maven, and Allure Reports.</p>
+          </article>
+          <article class="skill">
+            <h3>Tools</h3>
+            <p>Jira, Trello, Git, GitHub, and Postman.</p>
+          </article>
+          <article class="skill">
+            <h3>Also used in delivery</h3>
+            <p>PHP, Laravel 7–10, JavaScript, HTML, CSS, Bootstrap, and jQuery.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience">
-      <div class="container">
-        <h2 class="section-h"><span class="dot"></span> Experience</h2>
+      <div class="wrap">
+        <p class="section-label">03 — Experience</p>
+        <h2>QA experience, 2 years.</h2>
+        <p class="section-lead">November 2024 to the present. Company names stay the same. The QA title covers this window only.</p>
         <div class="timeline">
-          <div class="t-item">
-            <div class="when">2025 - Present</div>
-            <div class="what">
-              <h4>Software Tester</h4>
-              <p>Validating product releases with functional & API testing, writing detailed bug reports and working closely with developers to fix regressions fast.</p>
+          <article class="job">
+            <div>
+              <p class="when">Feb 2025 – Present</p>
+              <p class="where">Kuwait</p>
+            </div>
+            <div>
+              <h3>Peacock Concierge</h3>
+              <p class="title">Software QA Engineer</p>
               <ul>
-                <li>Designed test cases for new features and critical flows.</li>
-                <li>Built Postman collections to verify endpoints and contracts.</li>
-                <li>Partnered with devs to reproduce, triage, and verify fixes.</li>
+                <li>Test web and API modules for a Laravel product used by web and mobile clients, including regression passes before release.</li>
+                <li>Validate REST APIs in Postman, including methods, status codes, JSON responses, and third-party services such as SMS gateways.</li>
+                <li>Check database integrity and financial transaction and wallet calculations with SQL.</li>
+                <li>Write defect reports, retest fixes with developers, and follow the change in Git.</li>
               </ul>
             </div>
-          </div>
-          <div class="t-item">
-            <div class="when">2023 - 2025</div>
-            <div class="what">
-              <h4>Full‑stack / Backend Developer (Projects)</h4>
-              <p>Laravel + MySQL projects: authentication, dashboards, REST APIs, and performance‑minded SQL queries.</p>
+          </article>
+          <article class="job">
+            <div>
+              <p class="when">Nov 2024 – Jan 2025</p>
+              <p class="where">Saudi Arabia</p>
+            </div>
+            <div>
+              <h3>Rounds</h3>
+              <p class="title">Software QA Engineer</p>
               <ul>
-                <li>Implemented CRUD APIs and request validation.</li>
-                <li>Optimized queries and added DB indexes to speed up reports.</li>
-                <li>Integrated third‑party services and handled error states.</li>
+                <li>Functionally tested admin dashboard features and checked business rules before release.</li>
+                <li>Validated APIs and ran smoke tests after production updates on rounds.run/admin.</li>
               </ul>
             </div>
+          </article>
+        </div>
+
+        <div class="earlier">
+          <h2>Earlier development.</h2>
+          <p class="section-lead">These roles came before the QA window. They are why I can read the system I am testing.</p>
+          <div class="timeline">
+            <article class="job">
+              <div>
+                <p class="when">Aug 2023 – Oct 2024</p>
+                <p class="where">Saudi Arabia</p>
+              </div>
+              <div>
+                <h3>Rounds</h3>
+                <p class="title">Full-stack Developer</p>
+                <ul>
+                  <li>Built a Laravel 7 application with HTML, CSS, and JavaScript, including the admin dashboard at rounds.run/admin.</li>
+                  <li>Integrated third-party APIs and deployed with Hostinger and cPanel.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="job">
+              <div>
+                <p class="when">Jan 2022 – Mar 2023</p>
+                <p class="where">Maadi, Cairo</p>
+              </div>
+              <div>
+                <h3>Money Master</h3>
+                <p class="title">Full-stack Developer</p>
+                <ul>
+                  <li>Built Laravel 9 APIs for user management and financial transactions, plus an admin panel with Laravel and Bootstrap.</li>
+                  <li>Deployed on Hostinger and cPanel, and checked transactions against API responses and database records.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="job">
+              <div>
+                <p class="when">Feb 2022 – Mar 2022</p>
+                <p class="where">Internship</p>
+              </div>
+              <div>
+                <h3>Orange</h3>
+                <p class="title">Backend Intern</p>
+                <ul>
+                  <li>Built an API for the ODC Learning System and an admin panel with Laravel 8.</li>
+                  <li>Functionally tested the API and admin flows as part of that delivery.</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
- <!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <h2 class="section-h"><span class="dot"></span> Projects</h2>
-    <div class="grid-3">
-
-      <article class="project">
-        <img src="imgs/img1.jpeg" alt="Peacock Concierge" />
-        <div class="p-body">
-          <h4>Peacock Concierge</h4>
-          <p class="lead">
-            Developing and maintaining scalable backend services using Laravel, designing and integrating RESTful APIs, managing relational databases, and integrating third-party services.
-          </p>
-          <div class="tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Git</span>
+    <section id="projects">
+      <div class="wrap">
+        <p class="section-label">04 — Project</p>
+        <h2>A public QA project I can share.</h2>
+        <p class="section-lead">Employment work is not in a personal GitHub repository. This is the team project where my commits are public.</p>
+        <article class="project">
+          <div>
+            <h3>OrangeHRM — manual testing and test automation</h3>
+            <p><strong>Team contributor, DEPI, 2025.</strong> The repository is owned by Youssef Zaafan. I have 16 commits. I did not create the repository alone.</p>
+            <p>My commits include the login page object, login test cases, a TestNG data provider, dashboard page updates, Maven configuration, and documentation edits.</p>
+            <p>The team also covered manual test cases, bug reports, and the Login, Admin, PIM, My Info, and Leave modules with Jira, Selenium WebDriver, TestNG, Maven, and Allure Reports.</p>
+            <ul class="tags">
+              <li>Login automation</li>
+              <li>Selenium</li>
+              <li>TestNG</li>
+              <li>Maven</li>
+              <li>Allure</li>
+              <li>Jira</li>
+            </ul>
+            <a class="btn" href="https://github.com/youssefzaafan/DEPI-Graduation-Project/" target="_blank" rel="noopener noreferrer">View team repository</a>
           </div>
+          <aside class="side">
+            <h3>Committed by me</h3>
+            <ul>
+              <li>LoginPage and LoginTest</li>
+              <li>TestNG data provider</li>
+              <li>Dashboard page updates</li>
+              <li>pom.xml and documentation</li>
+            </ul>
+            <p>Application under test: opensource-demo.orangehrmlive.com.</p>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap edu">
+        <div>
+          <p class="section-label">05 — Education</p>
+          <h2>Cairo University</h2>
+          <p><strong>BSc Accounting, Very Good</strong><br />September 2014 – May 2018<br />Giza, Egypt</p>
         </div>
-      </article>
-
-      <article class="project">
-        <img src="imgs/img4.jpeg" alt="Rounds" />
-        <div class="p-body">
-          <h4>Rounds</h4>
-          <p class="lead">
-            Full-stack web application using Laravel 7, HTML5, CSS3, and JavaScript with an admin dashboard, API integrations, and deployment via Hostinger & cPanel.
-          </p>
-          <div class="tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project">
-        <img src="imgs/img2.png" alt="Money Master" />
-        <div class="p-body">
-          <h4>Money Master</h4>
-          <p class="lead">
-            APIs for a financial mobile application using Laravel 9, backend logic for user management & transactions, admin panel with Bootstrap, and deployment on Hostinger.
-          </p>
-          <div class="tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">REST APIs</span>
-          </div>
-        </div>
-      </article>
-
-
-
-    </div>
-  </div>
-</section>
-
-
-
-
-    <!-- CERTIFICATES -->
-  <!-- CERTIFICATES -->
-<section id="certificates">
-  <div class="container">
-    <h2 class="section-h"><span class="dot"></span> Certificates</h2>
-    <div class="grid-3">
-
-      <article class="certificate">
-        <div class="p-body">
-          <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
-          <p class="lead">Software Testing • June 2025 – Present</p>
-        </div>
-      </article>
-
-      <article class="certificate">
-        <div class="p-body">
-          <h4>Information Technology Institute (ITI)</h4>
-          <p class="lead">Fullstack Web Developer using PHP • Completed Feb 2022</p>
-        </div>
-      </article>
-
-      <article class="certificate">
-        <div class="p-body">
-          <h4>Information Technology Institute (ITI)</h4>
-          <p class="lead">Software Development Fundamentals • Completed Aug 2021</p>
-        </div>
-      </article>
-
-      <article class="certificate">
-        <div class="p-body">
-          <h4>National Telecommunication Institute (NTI)</h4>
-          <p class="lead">Web Development (PHP, MySQL, Laravel) • Mar 2021 • Score: 98%</p>
-        </div>
-      </article>
-
-      <article class="certificate">
-        <div class="p-body">
-          <h4>National Telecommunication Institute (NTI)</h4>
-          <p class="lead">Web Design • Nov 2021 • Score: 96%</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-h"><span class="dot"></span> Contact</h2>
-        <div class="contact">
-          <div class="info"><i class="fa fa-envelope"></i><a href="mailto:marianashawky3@gmail.com" target="_blank">marianashawky3@gmail.com</a></div>
-          <div class="info"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank">LinkedIn</a></div>
-          <div class="info"><i class="fa fa-github"></i><a href="https://github.com/marianashawky" target="_blank">GitHub</a></div>
-          <div class="info"><i class="fa fa-whatsapp"></i><a href="https://wa.me/201225540850" target="_blank">WhatsApp</a></div>
+        <div>
+          <p class="section-label">Training</p>
+          <ul class="cert-list">
+            <li><strong>DEPI</strong> — Software Testing, June 2025 – December 2025</li>
+            <li><strong>ITI</strong> — Full Stack Web Developer using PHP, completed February 2022</li>
+            <li><strong>ITI</strong> — Software Development Fundamentals, completed August 2021</li>
+            <li><strong>NTI</strong> — Web Development using PHP, MySQL, and Laravel, March 2021, score 98%</li>
+            <li><strong>NTI</strong> — Web Design, November 2021, score 96%</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> Mariana Shawky. Built with clean HTML/CSS.
-    </footer>
+    <section class="contact-band" id="contact">
+      <div class="wrap">
+        <p class="section-label">06 — Contact</p>
+        <h2>Let’s talk about a QA role.</h2>
+        <p class="section-lead">Email is the fastest way to reach me. The portfolio link is the same one printed on the CV.</p>
+        <div class="contact-grid">
+          <article>
+            <span>Email</span>
+            <p><a href="mailto:marianashawky3@gmail.com">marianashawky3@gmail.com</a></p>
+            <span>Phone</span>
+            <p><a href="tel:+201225540850">01225540850</a></p>
+          </article>
+          <article>
+            <span>Location</span>
+            <p>Shobra, Cairo, Egypt</p>
+            <span>Portfolio</span>
+            <p><a href="https://marianashawky.github.io/resumemariana/">marianashawky.github.io/resumemariana</a></p>
+          </article>
+          <article>
+            <span>LinkedIn</span>
+            <p><a href="https://www.linkedin.com/in/mariana-shawky-5a37a4198/" target="_blank" rel="noopener noreferrer">mariana-shawky</a></p>
+            <span>GitHub</span>
+            <p><a href="https://github.com/marianashawky" target="_blank" rel="noopener noreferrer">github.com/marianashawky</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
-
+  <footer>
+    <div class="wrap">© <span id="year"></span> Mariana Shawky · Software QA Engineer</div>
+  </footer>
   <script>
-    // active link switcher on scroll (simple)
-    const sections = [...document.querySelectorAll('section[id]')];
-    const links = [...document.querySelectorAll('.nav-link')];
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector("#site-nav");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    const sections = [...document.querySelectorAll("main section[id]")];
+    const links = [...nav.querySelectorAll("a[href^='#']")];
     const onScroll = () => {
-      const pos = window.scrollY + 120;
-      let id = 'home';
-      for (const s of sections) {
-        if (pos >= s.offsetTop) id = s.id;
-      }
-      links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+      const pos = window.scrollY + 100;
+      let id = "home";
+      for (const section of sections) if (pos >= section.offsetTop) id = section.id;
+      links.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === "#" + id));
     };
-    document.addEventListener('scroll', onScroll);
+    document.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
