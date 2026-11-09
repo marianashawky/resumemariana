@@ -266,7 +266,7 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cv" href="Mariana-Shawky-QA-Engineer-CV.pdf" download>Download CV</a>
+        <a class="nav-cv" href="Mariana-Shawky-QA-Engineer-CV.pdf?v=4" download="Mariana-Shawky-CV.pdf" target="_blank" rel="noopener">Download CV</a>
       </nav>
     </div>
   </header>
@@ -292,7 +292,7 @@
           </ul>
           <p class="intro">I am a Software Tester focused on API and backend testing. I check web applications, REST APIs, and the database records behind them. My employment titles are in software development, and that Laravel and MySQL background is how I trace a defect from the request into the data.</p>
           <div class="cta">
-            <a class="btn primary" href="Mariana-Shawky-QA-Engineer-CV.pdf" download>Download CV</a>
+            <a class="btn primary" href="Mariana-Shawky-QA-Engineer-CV.pdf?v=4" download="Mariana-Shawky-CV.pdf" target="_blank" rel="noopener">Download CV</a>
             <a class="btn secondary" href="#projects">View Projects</a>
             <a class="btn secondary" href="#contact">Contact Me</a>
           </div>
@@ -539,8 +539,10 @@
     });
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        setTimeout(() => {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        }, 300);
       });
     });
     const sections = [...document.querySelectorAll("main section[id]")];
